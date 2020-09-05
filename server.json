@@ -1,0 +1,48 @@
+{
+	"books": [
+    {
+      "id": "3c735293-b5ad-41d1-a9c8-1758be9e35f6",
+      "author" : "Kevin Kwan",
+      "title": "Crazy rich asians",
+      "description" : "the outrageously funny debut novel about three super-rich, pedigreed Chinese families and the gossip...",
+      "image_url": "",
+      "price": 24.12,
+      "prince_discount": 14.99,
+      "stars" : 4,
+      "review": "252 review"
+    },
+    {
+      "id": "f52fe144-117e-4360-b370-6e7e956c8076",
+      "author" : "Margaret Atwood",
+      "title": "The handmaid’s tale",
+      "description" : "This novel can be interpreted as a double narrative, Offred's tale and the handmaids' tales. The night...",
+      "image_url": "",
+      "price": 18.99,
+      "prince_discount": 6.99,
+      "stars" : 4.1,
+      "review": "1,1M review"
+    },
+    {
+      "id": "081195b0-980f-4d59-91e0-17ba12e363eb",
+      "author" : "Aldous Huxley",
+      "title": "Brave new world",
+      "description" : "Dystopian novel written in 1931 by English author Aldous Huxley, and published in 1932. Largely set in...",
+      "image_url": "",
+      "price": 42.50,
+      "prince_discount": 12.43,
+      "stars" : 4,
+      "review": "1,3M review"
+    },
+    {
+      "id": "cc8f2eb0-e0de-4d33-86f4-e99ad4c7e5c9",
+      "author" : "Tara Westover",
+      "title": "Educated",
+      "description" : "It is a tale of fierce family loyalty and of the grief that comes with severing the closest of ties. With...",
+      "image_url": "",
+      "price": 34.20,
+      "prince_discount": 12.68,
+      "stars" : 4.2,
+      "review": "364 review"
+    }
+  ]
+}
