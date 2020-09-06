@@ -2,7 +2,11 @@ import React, {useEffect, useState} from 'react'
 import * as S from './styled'
 import Point from '../../images/Ellipse 3.png'
 import axios from 'axios'
-import Brave from '../../images/brave_new_world.svg'
+import BraveImg from '../../images/brave_new_world.svg'
+import EducatedImg from '../../images/educated.svg'
+import CrazyImg from '../../images/crazy_rich_asians.svg'
+import HandmaidsImg from '../../images/the_handmaids_tale.svg'
+/*import { Link } from 'react-router-dom'*/
 
 
 function ProductsHome() {
@@ -47,75 +51,10 @@ function ProductsHome() {
         </S.ListGender>
 
 
-     { /*  <S.ContainerProducts>
-        <div>    
-        <img src={Brave} alt="brave" />
-        </div>
-
-        <S.Description>
-        <S.Autor>Aldous Huxley</S.Autor>
-        <S.BookTitle>Brave new world</S.BookTitle>
-        <S.Review>1,3M review</S.Review>
-        <S.BookData>dystopian novel written in 1931 by English author Aldous Huxley, and published in 1932. Largely set in..</S.BookData>
-        <S.Price>R$12.43</S.Price><S.Price2>R$42.50</S.Price2><br/>
-        <S.Button>BUY NOW</S.Button>
-        </S.Description>
-
-    </S.ContainerProducts> 
-
-    <S.ContainerProducts>
-        <div>    
-        <img src={Brave} alt="brave" />
-        </div>
-
-        <S.Description>
-        <S.Autor>Aldous Huxley</S.Autor>
-        <S.BookTitle>Brave new world</S.BookTitle>
-        <S.Review>1,3M review</S.Review>
-        <S.BookData>dystopian novel written in 1931 by English author Aldous Huxley, and published in 1932. Largely set in..</S.BookData>
-        <S.Price>R$12.43</S.Price><S.Price2>R$42.50</S.Price2><br/>
-        <S.Button>BUY NOW</S.Button>
-        </S.Description>
-
-    </S.ContainerProducts> 
-
-    <S.ContainerProducts>
-        <div>    
-        <img src={Brave} alt="brave" />
-        </div>
-
-        <S.Description>
-        <S.Autor>Aldous Huxley</S.Autor>
-        <S.BookTitle>Brave new world</S.BookTitle>
-        <S.Review>1,3M review</S.Review>
-        <S.BookData>dystopian novel written in 1931 by English author Aldous Huxley, and published in 1932. Largely set in..</S.BookData>
-        <S.Price>R$12.43</S.Price><S.Price2>R$42.50</S.Price2><br/>
-        <S.Button>BUY NOW</S.Button>
-        </S.Description>
-
-    </S.ContainerProducts> 
-
-    <S.ContainerProducts>
-        <div>    
-        <img src={Brave} alt="brave" />
-        </div>
-
-        <S.Description>
-        <S.Autor>Aldous Huxley</S.Autor>
-        <S.BookTitle>Brave new world</S.BookTitle>
-        <S.Review>1,3M review</S.Review>
-        <S.BookData>dystopian novel written in 1931 by English author Aldous Huxley, and published in 1932. Largely set in..</S.BookData>
-        <S.Price>R$12.43</S.Price><S.Price2>R$42.50</S.Price2><br/>
-        <S.Button>BUY NOW</S.Button>
-        </S.Description>
-
-    </S.ContainerProducts>  */}
-
-
-        {books.map(function (book) {
+         {books.map(function (book) {
           return  <S.ContainerProducts>
           <div>    
-          <img src={Brave} alt="brave" />
+          <img src={BraveImg} alt="brave" />
           </div>
   
           <S.Description>
@@ -128,19 +67,13 @@ function ProductsHome() {
           </S.Description>
   
       </S.ContainerProducts>
-        })} 
-
+        })}  
 
     
         </S.Container>
         
-        
-        
-        
-        
+                
         </>
-
-
 
 
     )

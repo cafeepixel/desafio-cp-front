@@ -16,6 +16,10 @@ export const Container = styled.div`
 
 export const CheckImg = styled.img`
     margin-top: 260px;
+    width: 160px;
+    height: 160px;
+    left: 640px;
+    top: 376px; 
 
 
 

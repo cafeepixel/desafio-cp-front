@@ -1,68 +1,51 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Logo](http://cafeepixel.com.br/assinaturas/logo_color_git.png)
 
-## Available Scripts
 
-In the project directory, you can run:
 
-### `yarn start`
+# Desafio Frontend Café & Pixel
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Descrição
+Desafio proposto pela Café & Pixel, o objetivo e criar uma aplicação de um ecommerce de livros, neste link de encontram as telas do app que devem ser desenvolvidas  [neste link](https://www.figma.com/file/umDLjMwMnxe4N68mQnucBN/ecommerce-desafio-cp?node-id=0%3A1)
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Tecnologias principais
+<li>HTML, CSS, JavaScript e React</li>     
 
-### `yarn test`
+## Tecnologias auxiliares
+<li>Biblioteca principal: React.js;</li>
+<li>Estilização: Styled Components </li> 
+<li>API(mockup): JSON Server;</li>
+<li>Requisições HTTP: Axios;</li>
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Instruções de Instalação
 
-### `yarn build`
+Necessário possuir o NodeJS instalado
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+`````
+git clone https://github.com/maxassis/desafio-cp-front.git
+npm install
+npm start
+`````
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+Se preciso rodar um server Json 'fake' para consumir os dados da API localmente no endereço:  ``http://localhost:3333/books``
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+basta rodar o comando :
 
-### `yarn eject`
+``npx json-server server.json -p 3333``
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Saiba mais
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Web App
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Telas
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Desktop
 
-### Code Splitting
+![](https://images2.imgbox.com/98/f1/Yfc1Fxg4_o.jpg)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+![](https://images2.imgbox.com/f4/25/yz2NxaDI_o.jpg)
 
-### Analyzing the Bundle Size
+![](https://images2.imgbox.com/cb/39/fuxXixGb_o.jpg)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
