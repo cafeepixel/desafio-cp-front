@@ -8,8 +8,8 @@ function App() {
   return (
    <>
    <GlobalStyles/>
-  { /* <Home/> */}
-  <Done/>
+    <Home/> 
+  {/* <Done/> */}
    
    
    
