@@ -8,20 +8,17 @@ import Brave from '../../images/brave_new_world.svg'
 function ProductsHome() {
     const [books, setBooks] = useState([])
 
-    useEffect(() => {
-        executeRequest()
-      }, []); 
 
-      const executeRequest = async () => {
-        await axios.get("http://localhost:3333/books").then((response) => {
-            console.log(response.data)
+    useEffect(() => {
+        axios.get('http://localhost:3333/books').then((response) => {
             setBooks(response.data)
         }).catch(error => {
             console.log(error.response)
         })
-    }
-         
+        
+      }, []); 
 
+    console.log(books[0])
 
     return(
         <>
@@ -49,7 +46,8 @@ function ProductsHome() {
         </S.List>
         </S.ListGender>
 
-        <S.ContainerProducts>
+
+     { /*  <S.ContainerProducts>
         <div>    
         <img src={Brave} alt="brave" />
         </div>
@@ -63,9 +61,9 @@ function ProductsHome() {
         <S.Button>BUY NOW</S.Button>
         </S.Description>
 
-        </S.ContainerProducts>
+    </S.ContainerProducts> 
 
-        <S.ContainerProducts>
+    <S.ContainerProducts>
         <div>    
         <img src={Brave} alt="brave" />
         </div>
@@ -79,9 +77,9 @@ function ProductsHome() {
         <S.Button>BUY NOW</S.Button>
         </S.Description>
 
-        </S.ContainerProducts>
+    </S.ContainerProducts> 
 
-        <S.ContainerProducts>
+    <S.ContainerProducts>
         <div>    
         <img src={Brave} alt="brave" />
         </div>
@@ -95,7 +93,43 @@ function ProductsHome() {
         <S.Button>BUY NOW</S.Button>
         </S.Description>
 
-        </S.ContainerProducts>
+    </S.ContainerProducts> 
+
+    <S.ContainerProducts>
+        <div>    
+        <img src={Brave} alt="brave" />
+        </div>
+
+        <S.Description>
+        <S.Autor>Aldous Huxley</S.Autor>
+        <S.BookTitle>Brave new world</S.BookTitle>
+        <S.Review>1,3M review</S.Review>
+        <S.BookData>dystopian novel written in 1931 by English author Aldous Huxley, and published in 1932. Largely set in..</S.BookData>
+        <S.Price>R$12.43</S.Price><S.Price2>R$42.50</S.Price2><br/>
+        <S.Button>BUY NOW</S.Button>
+        </S.Description>
+
+    </S.ContainerProducts>  */}
+
+
+        {books.map(function (book) {
+          return  <S.ContainerProducts>
+          <div>    
+          <img src={Brave} alt="brave" />
+          </div>
+  
+          <S.Description>
+          <S.Autor>{book.author}</S.Autor>
+          <S.BookTitle>{book.title}</S.BookTitle>
+          <S.Review>{book.review}</S.Review>
+          <S.BookData>{book.description}</S.BookData>
+          <S.Price>{book.price}</S.Price><S.Price2>{book.prince_discount}</S.Price2><br/>
+          <S.Button>BUY NOW</S.Button>
+          </S.Description>
+  
+      </S.ContainerProducts>
+        })} 
+
 
     
         </S.Container>

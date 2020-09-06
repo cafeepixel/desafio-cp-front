@@ -3,10 +3,8 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
     display: grid;
-    grid-template-rows: 350px 350px;
-    grid-template-columns: 356px 500px 500px;
+    grid-template: 350px 350px / 356px 500px 500px;
     height: 1028px;
-   /* background-color: purple; */
     background-image: url("https://images2.imgbox.com/69/44/6sQHXFIr_o.png");
     background-repeat: no-repeat;
     padding-top: 25px;
@@ -20,6 +18,10 @@ export const ListGender = styled.div`
     justify-content: center;
     width: 416px;
     height: 722px;
+    grid-column-start: 1  ;
+    grid-column-end: 2;
+     grid-row-start: 1 ;
+    grid-row-end:  3 ;
     
 
 
@@ -70,6 +72,7 @@ export const ContainerProducts = styled.div`
     display:flex;
     align-items: center;
     justify-content: space-between;
+    
 
 
 
@@ -96,6 +99,7 @@ export const Button = styled.button`
 
 
 export const Description = styled.div`
+   
    max-width: 176px;
    margin-right: 75px;
    grid-column-start: 1;
