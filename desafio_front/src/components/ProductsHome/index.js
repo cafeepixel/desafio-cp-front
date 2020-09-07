@@ -6,7 +6,7 @@ import BraveImg from '../../images/brave_new_world.svg'
 import EducatedImg from '../../images/educated.svg'
 import CrazyImg from '../../images/crazy_rich_asians.svg'
 import HandmaidsImg from '../../images/the_handmaids_tale.svg'
-/*import { Link } from 'react-router-dom'*/
+
 
 
 function ProductsHome() {
@@ -31,22 +31,22 @@ function ProductsHome() {
         <S.ListGender>
         <S.List>
             <S.ListItem1><S.Point src={Point} alt="ponto" />Categories</S.ListItem1>
-            <S.ListItem>Art & Fashion</S.ListItem>
-            <S.ListItem>Biography</S.ListItem>
-            <S.ListItem>Business</S.ListItem>
-            <S.ListItem>Children`s</S.ListItem>
-            <S.ListItem>Education</S.ListItem>
-            <S.ListItem>Fiction & Poetry</S.ListItem>
-            <S.ListItem> Education</S.ListItem>
-            <S.ListItem>Film, TV & Drama</S.ListItem>
-            <S.ListItem>Food & Drink</S.ListItem>
-            <S.ListItem>Film, TV & Drama</S.ListItem>
-            <S.ListItem>Health & Wellbeing</S.ListItem>
-            <S.ListItem>History & Politics</S.ListItem>
-            <S.ListItem>Home & Garden</S.ListItem>
-            <S.ListItem>Languages with Grant</S.ListItem>
-            <S.ListItem>Sport & Hobbies</S.ListItem>
-            <S.ListItem>Travel & Maps</S.ListItem>     
+            <S.ListItem><S.Linki to="/business">Art & Fashion</S.Linki></S.ListItem>
+            <S.ListItem><S.Linki to="/business">Biography</S.Linki></S.ListItem>
+            <S.ListItem><S.Linki to="/business">Business</S.Linki></S.ListItem>
+            <S.ListItem><S.Linki to="/business">Children`s</S.Linki></S.ListItem>
+            <S.ListItem><S.Linki to="/business">Education</S.Linki></S.ListItem>
+            <S.ListItem><S.Linki to="/business">Fiction & Poetry</S.Linki></S.ListItem>
+            <S.ListItem><S.Linki to="/business"> Education</S.Linki></S.ListItem>
+            <S.ListItem><S.Linki to="/business">Film, TV & Drama</S.Linki></S.ListItem>
+            <S.ListItem><S.Linki to="/business">Food & Drink</S.Linki></S.ListItem>
+            <S.ListItem><S.Linki to="/business">Film, TV & Drama</S.Linki></S.ListItem>
+            <S.ListItem><S.Linki to="/business">Health & Wellbeing</S.Linki></S.ListItem>
+            <S.ListItem><S.Linki to="/business">History & Politics</S.Linki></S.ListItem>
+            <S.ListItem><S.Linki to="/business">Home & Garden</S.Linki></S.ListItem>
+            <S.ListItem><S.Linki to="/business">Languages with Grant</S.Linki></S.ListItem>
+            <S.ListItem><S.Linki to="/business">Sport & Hobbies</S.Linki></S.ListItem>
+            <S.ListItem><S.Linki to="/business">Travel & Maps</S.Linki></S.ListItem>     
         </S.List>
         </S.ListGender>
 
@@ -63,7 +63,7 @@ function ProductsHome() {
           <S.Review>{book.review}</S.Review>
           <S.BookData>{book.description}</S.BookData>
           <S.Price>{book.price}</S.Price><S.Price2>{book.prince_discount}</S.Price2><br/>
-          <S.Button>BUY NOW</S.Button>
+          <S.Button><S.Linki to="/cart">BUY NOW</S.Linki></S.Button>
           </S.Description>
   
       </S.ContainerProducts>
