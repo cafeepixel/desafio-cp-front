@@ -1,0 +1,23 @@
+.wrapper {
+    margin: 0 auto;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    .banner {
+        align-self: center;
+
+    }
+    .mainWrapper {
+        display: flex;
+        background: #f3f3f3;
+        position: relative;
+        height: 100vh;
+        margin: 100px 0px;
+        .sideBar {
+            background: #cfcfcf;
+            width: 30vw;
+        }
+    }
+}
