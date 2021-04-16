@@ -17,11 +17,11 @@ const Home: React.FC = ()=> {
             <div className={Styles.mainWrapper}>
                 <div className={Styles.sideBar}></div>
                 <div className={Styles.contentRight}>
-                    <div><form>
+                    {/* <div><form>
                         <input type="text" name="title"/>
                         <Button color="btnPripary" text="Search" submit={true}/>
                     </form>
-                    </div>
+                    </div> */}
                     <Report/>
                 </div>
             </div>
