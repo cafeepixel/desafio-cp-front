@@ -1,0 +1,6 @@
+Requirements
+- [Json Server, Node, React ]
+Run
+-[npm install]
+-[npm run server] - run api fake
+-[npm run start]  - run app

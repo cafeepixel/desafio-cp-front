@@ -12,14 +12,3 @@ export function* load() {
     yield put(loadFailure());
   }
 }
-
-
-export function* loadForTitle(title: string) {
-  try {
-    const response = yield call(api.get, `books?title_like=${title}`);
-
-    yield put(loadSuccess(response.data));
-  } catch (err) {
-    yield put(loadFailure());
-  }
-}

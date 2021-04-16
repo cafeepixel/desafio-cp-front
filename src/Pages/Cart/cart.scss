@@ -1,0 +1,43 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+}
+.container {
+    width: 75%;
+    .row {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.title {
+    font-weight: 700;
+    font-size: 16px;
+    color: #000;
+}
+
+.sub {
+    font-size: 8px;
+    color: #646464;
+}
+
+.price {
+    font-weight: 700;
+    font-size: 16px;
+    color: #000;
+}
+
+.wrapperButtons {
+    display: flex;
+    justify-content: space-between;
+    width: 100px;
+    flex-direction: row-reverse;
+}
+
+.checkoutWrapper {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    width: 100%;
+    margin-top: 100px;
+}

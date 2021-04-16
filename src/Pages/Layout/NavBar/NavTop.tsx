@@ -17,7 +17,7 @@ const NavTop: React.FC = () =>{
             <div className={Styles.navRight}>
                 <a href="#"><BiUser/></a>
                 <a href="#"><BiSearch/></a>
-                <a href="#"><BiShoppingBag/></a>
+                <Link to="/cart"><BiShoppingBag/></Link>
             </div>
         </div>
 
