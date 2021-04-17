@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import Header from '@/Components/Header';
-import Card from '@/Components/Card';
+import Header from '@/Components/atoms/Header';
+import Card from '@/Components/atoms/Card';
 import styles from './cart.scss';
-import Button from '@/Components/Button';
+import Button from '@/Components/atoms/Button';
 import { BiMinus, BiPlus } from 'react-icons/bi';
 import { Book } from '@/store/ducks/books/types';
 

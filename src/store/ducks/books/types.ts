@@ -10,6 +10,10 @@ export enum BooksTypes {
   LOAD_FOR_CATEGORY_SUCCCES = '@books/LOAD_FOR_CATEGORY_SUCCCES',
   LOAD_FOR_CATEGORY_FAILURE = '@books/LOAD_FOR_CATEGORY_FAILURE',
 
+  LOAD_FOR_TITLE_CATEGORY_REQUEST = '@books/LOAD_FOR_TITLE_CATEGORY_REQUEST',
+  LOAD_FOR_TITLE_CATEGORY_SUCCCES = '@books/LOAD_FOR_TITLE_CATEGORY_SUCCCES',
+  LOAD_FOR_TITLE_CATEGORY_FAILURE = '@books/LOAD_FOR_TITLE_CATEGORY_FAILURE',
+
 }
 
 export enum BooksTypes_ {
@@ -40,4 +44,5 @@ export interface BooksState {
   readonly data: Book[]
   readonly loading: boolean
   readonly error: boolean
+  readonly filter: string
 }

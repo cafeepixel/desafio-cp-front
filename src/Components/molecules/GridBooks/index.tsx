@@ -1,8 +1,8 @@
+import Card from '@/Components/atoms/Card';
 import { Book } from '@/store/ducks/books/types';
 import { formatPrice } from '@/utils/format';
 import React from 'react';
-import Button from '../Button';
-import Card from '../Card';
+import Button from '../../atoms/Button';
 import styles from "./card.scss"
 
 interface Props{

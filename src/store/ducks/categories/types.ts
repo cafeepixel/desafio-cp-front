@@ -4,7 +4,8 @@
 export enum CategoriesTypes {
   LOAD_REQUEST = '@categories/LOAD_REQUEST',
   LOAD_SUCCCES = '@categories/LOAD_SUCCCES',
-  LOAD_FAILURE = '@categories/LOAD_FAILURE' 
+  LOAD_FAILURE = '@categories/LOAD_FAILURE',
+  LOAD_CATEGORY_ACTIVED_SUCCCES = '@categories/LOAD_CATEGORY_ACTIVED_SUCCCES'
 }
 
 
@@ -14,7 +15,6 @@ export enum CategoriesTypes {
 export interface Category {
   id: number,
   name: string,
-  bookId: number
 }
 
 /**
@@ -22,6 +22,7 @@ export interface Category {
  */
 export interface CategoriesState {
   readonly data: Category[]
+  readonly actived: Category
   readonly loading: boolean
   readonly error: boolean
 }

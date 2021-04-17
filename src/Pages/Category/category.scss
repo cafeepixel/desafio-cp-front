@@ -1,19 +1,23 @@
-.sideBarNav {
+.wrapper {
+    margin: 0 auto;
+}
+
+.container {
     display: flex;
-    ul {
-        list-style: none;
+    flex-direction: column;
+    .banner {
+        align-self: center;
+
+    }
+    .mainWrapper {
         display: flex;
-        flex-direction: column;
-    }
-    li {
-        font-style: 500;
-        color: #646464;
-    }
-    a {
-        transition: all .5s;
-        cursor: pointer;
-        &:hover {
-            color: #000;
+        position: relative;
+        height: 100vh;
+        margin: 100px 0px;
+        .sideBar {
+            background: #cfcfcf;
+            width: 30vw;
+            padding: 25px 0px 25px 70px;
         }
     }
 }

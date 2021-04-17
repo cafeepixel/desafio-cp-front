@@ -1,32 +1,49 @@
-import React, { useEffect, useState } from "react"
+import React, { useEffect, useRef, useState } from "react"
 import Styles from "./navtop.scss"
 import { BiUser, BiSearch, BiShoppingBag  } from 'react-icons/bi';
 import { Link, useHistory } from "react-router-dom";
-import { useDispatch } from "react-redux";
-import { loadForTitle } from "@/store/ducks/books/sagas";
-import { loadForTitleRequest, loadRequest } from "@/store/ducks/books/actions";
+import { useDispatch, useSelector } from "react-redux";
+import { loadForTitle, loadForTitleCategory } from "@/store/ducks/books/sagas";
+import { loadForCategoryRequest, loadForTitleCategoryRequest, loadForTitleRequest, loadRequest } from "@/store/ducks/books/actions";
 import { Book } from "@/store/ducks/books/types";
-import Input from "@/Components/Input";
+import Input from "@/Components/atoms/Input";
 import AnchorLink from 'react-anchor-link-smooth-scroll'
+import { ApplicationState } from "@/store";
+import { Category } from "@/store/ducks/categories/types";
 
 
 const NavTop: React.FC = () =>{
     const dispatch = useDispatch()
     const [search, setSearch] = useState<string>()
+    const [searchCategory, setSearchCategory] = useState<string>()
+    const state = useSelector((category:ApplicationState)=> category.categories)
 
     useEffect(()=>{
         if(!search){
-        dispatch(loadRequest())
-        }
-        
+            dispatch(loadRequest())
+            }else{
+                dispatch(loadForTitleRequest(search))
+                window.scrollTo(0,800)
+            }        
     },[search])
 
-    const handleSearchClick = ()=>{
-        dispatch(loadForTitleRequest(search))
-    }
+    useEffect(()=>{
+        const objSearch = {
+            categoryId: state.actived && state.actived.id,
+            title: searchCategory
+
+        }
+        const category = state.actived && state.actived;
+        if(!searchCategory){
+            dispatch(loadForCategoryRequest(category)) 
+            }else{
+                dispatch(loadForTitleCategoryRequest(objSearch))
+            }        
+    },[searchCategory])
 
     return (
         <div className={Styles.container}>
+        
         <div className={Styles.navtop}>
             <div className={Styles.brand}><a href="#">Bookstore</a></div>
             <div className={Styles.nav}>
@@ -35,9 +52,29 @@ const NavTop: React.FC = () =>{
                 <a href="#">Stationery &amp; Gifts</a>
                 <a href="#">Blog</a>
             </div>
-            <div><Input type="text" placeholder="Search for Title" name="search" onChange={(e)=>{setSearch(e.target.value)}}>
-                    <AnchorLink href='#main'><BiSearch onClick={handleSearchClick}/></AnchorLink>   
-                </Input>
+            <div>
+                {!state.actived ? (
+                    <Input 
+                    type="text" 
+                    placeholder="Search for Title" 
+                    name="search"
+                    onChange={(e)=>{setSearch(e.target.value)}}
+                    >
+                        <BiSearch />   
+                    </Input>
+                ):(
+
+                    <Input 
+                    type="text" 
+                    placeholder="Search for Title in Category" 
+                    name="searchCategory"
+                    onChange={(e)=>{setSearchCategory(e.target.value)}}
+                    >
+                        <BiSearch/>   
+                    </Input>
+                )}
+
+
             </div>
             <div className={Styles.navRight}>
                 <a href="#"><BiUser/></a>

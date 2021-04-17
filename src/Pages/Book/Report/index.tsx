@@ -4,7 +4,7 @@ import axios from "axios"
 import { useSelector, useDispatch } from "react-redux"
 import {ApplicationState} from "@/store";
 import  { loadRequest } from "@/store/ducks/books/actions"
-import GridBooks from "@/Components/GridBooks";
+import GridBooks from "@/Components/molecules/GridBooks";
 
 interface Props {
 }
