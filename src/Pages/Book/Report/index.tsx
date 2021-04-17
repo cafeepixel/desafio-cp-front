@@ -11,15 +11,9 @@ interface Props {
 
 
 const Report: React.FC<Props> = ()=> {
-    const dispatch = useDispatch();
 
     const state = useSelector((state: ApplicationState) => state.books.data); 
 
-    useEffect(() => {
-            dispatch(loadRequest());
-    },[]);
-
-    console.log(state && state)
 
 
     return (

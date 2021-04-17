@@ -1,7 +1,9 @@
 import { call, put } from 'redux-saga/effects';
 import {api} from '@/services/api';
 
-import { loadSuccess, loadFailure } from './actions';
+import { loadSuccess, loadFailure, loadForTitleSuccess, loadForCategoryFailure, loadForTitleFailure, loadForTitleRequest } from './actions';
+import { AnyAction } from 'redux';
+import { Book } from './types';
 
 export function* load() {
   try {
@@ -14,12 +16,14 @@ export function* load() {
 }
 
 
-export function* loadForTitle(title: string) {
+export function* loadForTitle(action:AnyAction) {
   try {
-    const response = yield call(api.get, `books?title_like=${title}`);
+    
+    const response = yield call(api.get, `books?title_like=${action.payload.title}`);
+    console.log(response)
 
-    yield put(loadSuccess(response.data));
+    yield put(loadForTitleSuccess(response.data));
   } catch (err) {
-    yield put(loadFailure());
+    yield put(loadForTitleFailure());
   }
 }

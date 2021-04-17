@@ -14,8 +14,8 @@ export const loadForCategorySuccess = (data: Book[]) => action(BooksTypes.LOAD_F
 export const loadForCategoryFailure = () => action(BooksTypes.LOAD_FOR_CATEGORY_FAILURE);
 
 
-export const loadForTitleRequest = () => action(BooksTypes_.LOAD_FOR_TITLE_REQUEST);
+export const loadForTitleRequest = (title:string) => action(BooksTypes_.LOAD_FOR_TITLE_REQUEST, {title});
 
 export const loadForTitleSuccess = (data: Book[]) => action(BooksTypes_.LOAD_FOR_TITLE_SUCCCES, { data });
 
-export const loadForTitleailure = () => action(BooksTypes_.LOAD_FOR_TITLE_FAILURE);
+export const loadForTitleFailure = () => action(BooksTypes_.LOAD_FOR_TITLE_FAILURE);
