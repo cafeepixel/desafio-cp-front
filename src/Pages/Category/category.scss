@@ -1,0 +1,19 @@
+.sideBarNav {
+    display: flex;
+    ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+    }
+    li {
+        font-style: 500;
+        color: #646464;
+    }
+    a {
+        transition: all .5s;
+        cursor: pointer;
+        &:hover {
+            color: #000;
+        }
+    }
+}

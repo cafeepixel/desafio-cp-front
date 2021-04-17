@@ -4,6 +4,7 @@ import Banner from "../Banner";
 import Report from "../Book/Report";
 import Styles from "./home.scss"
 import AnchorLink from 'react-anchor-link-smooth-scroll'
+import Category from "../Category";
 
 
 const Home: React.FC = ()=> {
@@ -17,13 +18,10 @@ const Home: React.FC = ()=> {
                 <Banner/>
             </div>
             <div id="main" className={Styles.mainWrapper}>
-                <div className={Styles.sideBar}></div>
+                <div className={Styles.sideBar}>
+                    <Category/>
+                </div>
                 <div className={Styles.contentRight}>
-                    {/* <div><form>
-                        <input type="text" name="title"/>
-                        <Button color="btnPripary" text="Search" submit={true}/>
-                    </form>
-                    </div> */}
                     <Report/>
                 </div>
             </div>
