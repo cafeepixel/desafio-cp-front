@@ -1,8 +1,11 @@
 import { action } from 'typesafe-actions';
-import { CartTypes, Item } from './types';
+import { Book } from '../books/types';
+import { CartTypes } from './types';
 
-export const loadRequest = () => action(CartTypes.LOAD_REQUEST);
 
-export const loadSuccess = (data: Item[]) => action(CartTypes.LOAD_SUCCCES, { data });
 
-export const loadFailure = () => action(CartTypes.LOAD_FAILURE);
+
+export const removeSuccess = (book: Book) => action(CartTypes.REMOVE_SUCCCES, { book });
+
+export const addSuccess = (book: Book) => action(CartTypes.ADD_SUCCCES, { book });
+

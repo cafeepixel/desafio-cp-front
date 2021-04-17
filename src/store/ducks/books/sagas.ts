@@ -34,7 +34,6 @@ export function* loadForCategory(action:AnyAction) {
     
     const response = yield call(api.get, `categories/${action.payload.category.id}/books`);
     yield put(loadCategoryActived(action.payload.category))
-    console.log(response.data)
     yield put(loadForCategorySuccess(response.data));
   } catch (err) {
     yield put(loadForTitleFailure());

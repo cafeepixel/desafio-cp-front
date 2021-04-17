@@ -7,8 +7,9 @@ import styles from "./card.scss"
 
 interface Props{
     item: Book
+    onClick?: any
 }
-const GridBooks: React.FC<Props> =({item}:Props)=>{
+const GridBooks: React.FC<Props> =({onClick, item}:Props)=>{
     return(
         <div className={styles.cardWrapper}>
             <Card type="cardImg">
@@ -25,7 +26,7 @@ const GridBooks: React.FC<Props> =({item}:Props)=>{
                         <span className={styles.priceSale}>{formatPrice(item.prince_discount)}</span>
                         <span className={styles.priceOld}>{formatPrice(item.price)}</span>
                     </div>
-                    <Button color="btnPrimary" submit={true} text="Buy Now"/>
+                    <Button color="btnPrimary" submit={false} text="Buy Now" onClick={onClick}/>
             </Card>
         </div>
     )

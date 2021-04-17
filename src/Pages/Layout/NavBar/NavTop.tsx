@@ -10,6 +10,8 @@ import Input from "@/Components/atoms/Input";
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 import { ApplicationState } from "@/store";
 import { Category } from "@/store/ducks/categories/types";
+import { access } from "node:fs";
+import { ICartItem } from "@/store/ducks/cart/types";
 
 
 const NavTop: React.FC = () =>{
@@ -17,6 +19,7 @@ const NavTop: React.FC = () =>{
     const [search, setSearch] = useState<string>()
     const [searchCategory, setSearchCategory] = useState<string>()
     const state = useSelector((category:ApplicationState)=> category.categories)
+    const cart = useSelector((state:ApplicationState)=> state.cart)
 
     useEffect(()=>{
         if(!search){
@@ -79,7 +82,8 @@ const NavTop: React.FC = () =>{
             <div className={Styles.navRight}>
                 <a href="#"><BiUser/></a>
                 <a href="#"><BiSearch/></a>
-                <Link to="/cart"><BiShoppingBag/></Link>
+                <Link to="/cart"><BiShoppingBag/> { cart && cart.data ? cart.data.length
+                : 0} </Link>
             </div>
         </div>
         </div>

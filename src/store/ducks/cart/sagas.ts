@@ -1,14 +1,19 @@
-import { call, put } from 'redux-saga/effects';
-import {api} from '@/services/api';
+import { AnyAction } from 'redux';
+import { put } from 'redux-saga/effects';
+import {  addSuccess } from './actions';
 
-import { loadSuccess, loadFailure } from './actions';
 
-export function* load() {
-  try {
-    const response = yield call(api.get, 'books');
 
-    yield put(loadSuccess(response.data));
-  } catch (err) {
-    yield put(loadFailure());
-  }
-}
+// export function* loadItem(action:AnyAction) {
+
+//     const response = action.payload.item
+
+//     yield put(loadSuccess());
+// }
+
+// export function* addItem(action:AnyAction) {
+//     const response = action.payload
+
+//     yield put(addSuccess(response.book));
+  
+// }

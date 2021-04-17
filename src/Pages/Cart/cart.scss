@@ -7,6 +7,10 @@
     .row {
         display: flex;
         justify-content: space-between;
+        .cartGrid {
+            display: flex;
+
+        }
     }
 }
 
@@ -40,4 +44,6 @@
     justify-content: flex-end;
     width: 100%;
     margin-top: 100px;
+    justify-content: space-evenly;
+    margin-bottom: 100px;
 }
