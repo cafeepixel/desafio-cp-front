@@ -9,7 +9,8 @@
     "test:watch": "npm test -- --watch",
     "test:staged": "npm test -- --findRelatedTests",
     "test:ci": "npm test -- --coverage",
-    "server": "json-server server.json -p 3333"
+    "server": "json-server server.json -p 3333",
+    "build": "webpack --mode none"
   },
   "repository": {
     "type": "git",
