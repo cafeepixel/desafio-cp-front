@@ -4,7 +4,8 @@
   "description": "![Logo](http://cafeepixel.com.br/assinaturas/logo_color_git.png) # Desafio CP - Frontend",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --open",
+    "start": "node server.js",
+    "dev": "webpack-dev-server --open",
     "test": "jest --passWithNoTests --no-cache --runInBand",
     "test:watch": "npm test -- --watch",
     "test:staged": "npm test -- --findRelatedTests",
@@ -58,6 +59,7 @@
   },
   "dependencies": {
     "axios": "^0.21.1",
+    "express": "^4.17.1",
     "formik": "^2.2.8",
     "immer": "^9.0.1",
     "react": "^17.0.2",
