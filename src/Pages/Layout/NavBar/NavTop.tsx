@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react"
+import React, { useContext, useEffect, useRef, useState } from "react"
 import Styles from "./navtop.scss"
 import { BiUser, BiSearch, BiShoppingBag  } from 'react-icons/bi';
 import { Link, useHistory } from "react-router-dom";
@@ -12,6 +12,8 @@ import { ApplicationState } from "@/store";
 import { Category } from "@/store/ducks/categories/types";
 import { access } from "node:fs";
 import { ICartItem } from "@/store/ducks/cart/types";
+import AuthContext from "@/contexts/auth";
+import { FaSignOutAlt } from "react-icons/fa";
 
 
 const NavTop: React.FC = () =>{
@@ -20,6 +22,7 @@ const NavTop: React.FC = () =>{
     const [searchCategory, setSearchCategory] = useState<string>()
     const state = useSelector((category:ApplicationState)=> category.categories)
     const cart = useSelector((state:ApplicationState)=> state.cart)
+    const {user, signOut} = useContext(AuthContext)
 
     useEffect(()=>{
         if(!search){
@@ -55,7 +58,7 @@ const NavTop: React.FC = () =>{
                 <a href="#">Stationery &amp; Gifts</a>
                 <a href="#">Blog</a>
             </div>
-            <div>
+            <div className={Styles.search}>
                 {!state.actived ? (
                     <Input 
                     type="text" 
@@ -80,8 +83,7 @@ const NavTop: React.FC = () =>{
 
             </div>
             <div className={Styles.navRight}>
-                <a href="#"><BiUser/></a>
-                <a href="#"><BiSearch/></a>
+                <a href="#"><BiUser/>{user.name}<span><FaSignOutAlt onClick={signOut}/></span></a>
                 <Link to="/cart"><BiShoppingBag/> { cart && cart.data ? cart.data.length
                 : 0} </Link>
             </div>

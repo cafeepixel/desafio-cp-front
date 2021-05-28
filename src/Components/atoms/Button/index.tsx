@@ -12,7 +12,7 @@ const Button: React.FC<Props> =({text, color, submit, icon, onClick}:Props)=>{
     return(
         <button className={
             color==="btnPrimary" ? styles.btnPrimary : 
-        color==="btnCart" ? styles.btnCart : color==="btnSecondary" && styles.btnSecondary} type={submit?"submit":"button"} onClick={onClick}>
+        color==="btnCart" ? styles.btnCart : color==="btnSecondary" ? styles.btnSecondary: color==='btnLogin' && styles.btnLogin} type={submit?"submit":"button"} onClick={onClick}>
             {text || icon}
         </button>
     )

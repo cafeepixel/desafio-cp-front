@@ -15,3 +15,17 @@
         width: 450px;
     }
 }
+
+@media screen and (max-width: 992px) {
+    .container {
+        width: 35vw;
+    }
+
+  }
+  
+  /* On screens that are 600px wide or less, the background color is olive */
+  @media screen and (max-width: 600px) {
+    .container {
+        width: 35vw;
+    }
+  }
