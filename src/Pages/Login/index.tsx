@@ -10,15 +10,18 @@ import {
   Brand,
   Container,
   ContainerError,
+  ContainerUser,
   Header,
   TextError,
   Transition,
   Wrapper,
 } from "./styles";
+import { api } from "@/services/api";
 
 const Login: React.FC = () => {
   const { signIn, addMessage, message } = useContext(AuthContext);
   const [type, setType] = useState("password");
+  const [users, setUsers] = useState([]);
 
   const formik = useFormik({
     initialValues: {
@@ -57,16 +60,30 @@ const Login: React.FC = () => {
     },
   });
 
-  useEffect(()=>{
+  useEffect(() => {
     setTimeout(() => {
-      addMessage('')
+      addMessage("");
     }, 3000);
-  },[message])
+  }, [message]);
+
+  useEffect(() => {
+    async function getData(){
+    const {data} = await api.get("/users");
+    setUsers(data);
+    }
+    getData()
+  }, []);
+
 
   const handleCloseError = () => {
     addMessage("");
   };
 
+  const handleCloseUsers = () => {
+    setUsers([]);
+  };
+  console.log(users);
+  
   return (
     <Wrapper>
       <Transition>
@@ -75,10 +92,26 @@ const Login: React.FC = () => {
             <span>
               <IoIosClose onClick={handleCloseError} />
             </span>
-            <TextError><span>{message}</span></TextError>
+            <TextError>
+              <span>{message}</span>
+            </TextError>
           </ContainerError>
         ) : (
-          ""
+          users.length ? (
+            <ContainerUser>
+              <span>
+                <IoIosClose onClick={handleCloseUsers} />
+              </span>
+              <TextError>
+                {users.map((user) => (
+                  <>
+                    <span>{user.email}</span>
+                    <span>{user.password}</span>
+                  </>
+                ))}
+              </TextError>
+            </ContainerUser>
+          ):''
         )}
 
         <Container>
@@ -121,3 +154,7 @@ const Login: React.FC = () => {
 };
 
 export default Login;
+function getData() {
+  throw new Error("Function not implemented.");
+}
+

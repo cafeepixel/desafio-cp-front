@@ -36,6 +36,32 @@ export const ContainerError = styled.div`
 
 `;
 
+export const ContainerUser = styled.div`
+    display: flex;
+    flex:1;
+    height: 10vh;
+    padding-left: 30px;
+    background: #26bd00a9;
+    flex-direction: row-reverse;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.12),
+    0px 1px 3px rgba(0, 0, 0, 0.2);
+    span {
+      display: flex;
+      flex: 1;
+      flex-direction: row-reverse;
+      color: #fff;
+      svg{
+        font-weight: 700;
+        font-size: 20px;
+      }
+      &:hover svg{
+        cursor: pointer;
+        color: #ddd;
+      }
+    }
+
+`;
+
 export const TextError = styled.div`
     flex: 1;
     display: flex;
