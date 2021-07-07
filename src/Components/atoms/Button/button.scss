@@ -1,0 +1,88 @@
+
+.btnPrimary {
+    width: 176px;
+    height: 45px;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 8px;
+    color: #4C3DB2;
+    border-radius: 2px;
+    border:1px solid #4C3DB2;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all .5s;
+    &:hover {
+        background: #4C3DB2;
+        color: #FFF;
+    }
+
+}
+
+.btnLogin {
+    width: 100%;
+    height: 45px;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 8px;
+    color: #4C3DB2;
+    border-radius: 2px;
+    border:1px solid #4C3DB2;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all .5s;
+    &:hover {
+        background: #4C3DB2;
+        color: #FFF;
+    }
+
+}
+
+.btnCart {
+    width: 46px;
+    height: 45px;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 8px;
+    color: #4C3DB2;
+    border-radius: 2px;
+    border:1px solid #4C3DB2;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all .5s;
+    &:hover {
+        background: #4C3DB2;
+        color: #FFF;
+    }
+
+}
+
+.btnSecondary {
+    width: 176px;
+    height: 45px;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 8px;
+    color: #07c900;
+    border-radius: 2px;
+    border:1px solid #001103;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all .5s;
+    &:hover {
+        background: #07c900;
+        color: #FFF;
+    }
+
+}

@@ -1,0 +1,32 @@
+
+.cardWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    justify-content: space-between;
+    width: 450px;
+}
+
+span {
+    font-weight: 400;
+    font-size: 10px;
+    color: #818181;
+}
+.title {
+    font-weight: 700;
+    font-size: 16px;
+    color: #000;
+}
+
+.priceSale {
+    font-weight: 700;
+    font-size: 14px;
+    color: #000;
+}
+
+.priceOld {
+    font-size: 14px;
+    text-decoration: line-through;
+    margin-left: 5px;
+}
+

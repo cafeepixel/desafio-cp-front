@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100vw;
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+    }
+    main{
+    min-height: 100%;
+    position: relative;
+    }
+    main{
+      /** Altura do rodapé tem que ser igual a isso aqui e vice-versa **/
+    padding-bottom: 100px;
+    }
+    footer{
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    }
+
+    input {
+      outline: none;
+    }

@@ -1,0 +1,31 @@
+.container {
+    width:70vw;
+    position: absolute;
+    left: 300px;
+    top: 30px;
+    div:first-child {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .cardWrapper {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+        justify-content: space-between;
+        width: 450px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .container {
+        width: 35vw;
+    }
+
+  }
+  
+  /* On screens that are 600px wide or less, the background color is olive */
+  @media screen and (max-width: 600px) {
+    .container {
+        width: 35vw;
+    }
+  }
