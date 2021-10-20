@@ -20,9 +20,8 @@ Este repositório contém um problema usado para avaliar as skills do candidato.
 
 1. Faça um fork desse repositório no github e adicione permissão de leitura para **todos** os usuários abaixo:
 - [Marcelo](https://github.com/marcelomoreles)
-- [Édipo](http://github.com/shuhikari)
 - [Jailton](https://github.com/jlandim)
-- [Manoel](https://github.com/Manogel)
+- [Ailton](https://github.com/Sena32)
 
 2. Siga as instruções do README.md (este arquivo);
 3. Faça o deploy do seu projeto em algum serviço de hospedagem (Heroku, Firebase, etc);
